@@ -4,24 +4,59 @@ html {
   font-family: sans-serif;
 }
 
+figure {
+  position: relative;
+}
+
 .polaroid {
   margin: 0;
   padding: 10px;
   width: 250px;
-  position:absolute;
-
+  position: absolute;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, .5);
-  transition: linear all 200ms;
+  transition: all 1s linear;
 }
 
 .polaroid > img {
   display: block;
   width: 100%;
+  position: relative;
 }
 
 .polaroid > figcaption {
   color: #fff;
   text-shadow: 1px 1px 3px #000;
+  position: absolute;
+  text-align: center;
+  right: 5em;
+  bottom: 1em;
+}
+
+.polaroid:first-child {
+  transform: rotate(-14deg);
+  top: 6em;
+  left: 12em;
+  z-index: 1;
+}
+
+.polaroid:nth-child(2) {
+  z-index: 3;
+  top: 9em;
+  left: 17em;
+  transform: rotate(8deg);
+}
+
+.polaroid:nth-child(3) {
+  z-index: 2;
+  top: 6em;
+  left: 25em;
+  transform: rotate(30deg);
+}
+
+.polaroid:hover {
+  transform: rotate(0deg);
+  z-index: 4;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, .8);
 }
